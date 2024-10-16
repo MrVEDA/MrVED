@@ -1,0 +1,154 @@
+
+        .group-card {
+            margin-bottom: 20px;
+            position: relative;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            background: #f0f8ff;
+            display: flex;
+            align-items: center;
+            padding: 7px;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .whatsapp-card {
+            animation: whatsapp-border-animation 1s infinite;
+        }
+        .telegram-card {
+            animation: telegram-border-animation 1s infinite;
+        }
+        .instagram-card {
+            animation: instagram-border-animation 1s infinite;
+        }
+        @keyframes whatsapp-border-animation {
+            0% {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #25d366;
+            }
+            100% {
+                border-color: transparent;
+            }
+        }
+        @keyframes telegram-border-animation {
+            0% {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #004F7A;
+            }
+            100% {
+                border-color: transparent;
+            }
+        }
+        @keyframes instagram-border-animation {
+            0% {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #E1306C;
+            }
+            100% {
+                border-color: transparent;
+            }
+        }
+        .seoquake-nofollow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px 20px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            transition: all 0.3s ease-in-out;
+            color: white !important;
+        }
+        .seoquake-nofollow i {
+            margin-right: 5px;
+        }
+        .whatsapp-card .seoquake-nofollow {
+            background: #25d366;
+        }
+        .telegram-card .seoquake-nofollow {
+            background: #004F7A;
+        }
+        .instagram-card .seoquake-nofollow {
+            background: #E1306C;
+        }
+        .seoquake-nofollow:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* For Phone Screen CSS */
+        @media only screen and (max-width: 768px) {
+            .whatsapp-join-button {
+                position: fixed;
+                right: -10px; /* Button Right Side Margin */
+                top: 50%;
+                transform: translateY(-10%);
+                background-color: #25D366;
+                color: white;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                display: flex;
+                align-items: center;
+                padding: 5px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                z-index: 1000;
+                cursor: pointer;
+                text-decoration: none;
+                transition: right 0.3s ease-in-out;
+            }
+
+            .whatsapp-join-button img {
+                width: 24px;
+                height: 24px;
+                margin-right: 5px;
+            }
+
+            /* Animated Outline */
+            .whatsapp-join-button::before {
+                content: '';
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                right: -4px;
+                bottom: -4px;
+                border-radius: 30px 0 0 30px;
+                border: 2px solid #25D366;
+                animation: animate-outline 1s linear infinite;
+            }
+
+            /* Hover Effect */
+            .whatsapp-join-button:hover {
+                right: 0; /* Button Full Show */
+                background-color: #25D366; /* Background Color */
+            }
+
+            /* Animation */
+            @keyframes animate-outline {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1.15);
+                    opacity: 0;
+                }
+            }
+        }
+
+        /* PC Hiding CSS */
+        @media only screen and (min-width: 769px) {
+            .whatsapp-join-button {
+                display: none;
+            }
+        }
+    
